@@ -12,7 +12,13 @@ const Constant = {
     EMAIL_VERSION_ID_DOCUMENT_SUBMITTED: "38649481-4a30-4970-833b-b3a4af6625e1",
     SEND_EMAIL_URL: "http://tguc-production-vm.private.tguc.prod.skeps.com:3041/external/send-email",
     FROM_EMAIL: "noreply@pos.tgucfinancial.com",
-    LENDER_EMAIL: "underwriting@tgucfinancial.com"
+    LENDER_EMAIL: "underwriting@tgucfinancial.com",
+    USER_ENTITY_TYPE: {
+        BORROWER: 'Borrower',
+        CO_BORROWER: 'Co-Borrower',
+        MERCHANT: 'Merchant',
+        LENDER: 'Lender'
+    }
 }
 
 
