@@ -15,6 +15,7 @@ const {
     EMAIL_VERSION_ID_DOCUMENT_SUBMITTED,
     FROM_EMAIL,
     LENDER_EMAIL,
+    USER_ENTITY_TYPE,
 } = constants;
 
 async function getAccessToken() {
@@ -107,8 +108,10 @@ async function getOrderDetails(token, applicationId) {
           "dynamicData": {
             "borrower_first_name": orderDetails?.evaluation_data[0]?.applicant?.first_name,
             "borrower_last_name": orderDetails?.evaluation_data[0]?.applicant?.last_name,
-            "app_id": applicationId
+            "app_id": applicationId,
+            "entity": USER_ENTITY_TYPE.LENDER
           },
+          "emailType": orderDetails?.status,
           "emailParams": {
             "to": [`${LENDER_EMAIL}`],
             "from": {
